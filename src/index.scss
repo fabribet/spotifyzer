@@ -1,12 +1,14 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans';
   font-weight: 400;
   font-size: 12px;
+  background-color: #181818;
 }
 
 * {
@@ -17,7 +19,7 @@ html,
 body,
 body #reactinit,
 body #reactinit > div[data-reactroot] {
-  min-width: 100%;
+  min-width: 320px;
   min-height: 100%;
 }
 

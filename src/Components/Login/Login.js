@@ -19,7 +19,7 @@ export default class Login extends React.Component {
   _spotifyLogin() {
     const client_id = 'client_id=704bab56aa8a456fbae1949d5107d08c'
     const response_type = 'response_type=token'
-    const redirect_uri = 'redirect_uri=http://localhost:3000/spotifyzer'
+    const redirect_uri = 'redirect_uri=http://localhost:8080/ '
     const location =
       'https://accounts.spotify.com/authorize?' +
       client_id +
@@ -32,7 +32,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <div className={style.parentView}>
+      <div className={style.buttonContainer}>
         <SpotifyButton
           onClick={this._spotifyLogin}
           text="Log in with Spotify"

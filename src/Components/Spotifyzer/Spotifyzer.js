@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { GetAlbums } from './../../API/Album'
-import { Create as createComment, GetComments } from './../../API/Comment'
+import { Create as createComment /*GetComments*/ } from './../../API/Comment'
 import SearchBar from './SearchBar'
 import AlbumsList from './AlbumsList'
 import AlbumView from './AlbumView'
@@ -28,8 +28,9 @@ export default class Spotifyzer extends React.Component {
    * Triggers the search through the backend API and fires the onSearch
    */
   handleSearch(query) {
-    const search = '?'.concat(query)
-    const albums = GetAlbums(search, this.props.token)
+    const search = '?q='.concat(query)
+    /*const albums = */ GetAlbums(search, this.props.token)
+
     // to prevent a form submition
   }
 

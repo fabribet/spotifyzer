@@ -19,7 +19,7 @@ export default class SearchBar extends React.Component {
       <form
         onSubmit={event => {
           event.preventDefault()
-          console.log(this.props.handleSearch)
+          /*console.log(this.props.handleSearch)*/
           if (this.query) {
             this.props.handleSearch(this.query)
           }
@@ -31,7 +31,7 @@ export default class SearchBar extends React.Component {
               this.searchInput = input
             }}
             onChange={event => {
-              console.log('here: ' + event.target.value)
+              /*console.log('here: ' + event.target.value)*/
               this.query = event.target.value
             }}
             className={style.searchBox}
