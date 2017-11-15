@@ -1,0 +1,91 @@
+{
+  "name": "react-skel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React Skeleton to start Building Applications",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "webpack-dev-server",
+    "build": "webpack -p",
+    "test": "jest",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LateralView/React-skel.git"
+  },
+  "keywords": [
+    "React",
+    "Skeleton",
+    "Redux",
+    "Saga"
+  ],
+  "author": "Nahuel A. Veron <nahuelav96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LateralView/React-skel/issues"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add",
+      "npm test -- --lastCommit"
+    ]
+  },
+  "homepage": "https://github.com/LateralView/React-skel#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-jest": "^21.1.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "husky": "^0.14.3",
+    "image-webpack-loader": "^3.4.2",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.1.3",
+    "node-sass": "^4.5.3",
+    "node-uuid": "^1.4.8",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-loader": "^2.0.6",
+    "prettier": "^1.7.0",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^1.3.1",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "material-icons": "^0.1.0",
+    "md5": "^2.2.1",
+    "mongoose": "^4.12.3",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-css-themr": "^2.1.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-toolbox": "^2.0.0-beta.12",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
