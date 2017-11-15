@@ -1,8 +1,7 @@
 import style from './style.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
-import LoginForm from './LoginForm'
-import { Card, CardTitle, CardText } from 'react-toolbox/lib/card'
+import SpotifyButton from '../SpotifyButton'
 
 export default class Login extends React.Component {
   static get propTypes() {
@@ -15,25 +14,29 @@ export default class Login extends React.Component {
 
   constructor() {
     super()
-    this._register = this._register.bind(this)
   }
 
-  _register() {
-    this.props.history.push('/register')
+  _spotifyLogin() {
+    const client_id = 'client_id=704bab56aa8a456fbae1949d5107d08c'
+    const response_type = 'response_type=token'
+    const redirect_uri = 'redirect_uri=http://localhost:3000/spotifyzer'
+    const location =
+      'https://accounts.spotify.com/authorize?' +
+      client_id +
+      '&' +
+      response_type +
+      '&' +
+      redirect_uri
+    window.location = location
   }
 
   render() {
     return (
       <div className={style.parentView}>
-        <Card>
-          <CardTitle title="Login" subtitle="Log in With your SKEL Account" />
-          <CardText>
-            <LoginForm
-              onSubmit={this.props.onLogin}
-              onRegisterPressed={this._register}
-            />
-          </CardText>
-        </Card>
+        <SpotifyButton
+          onClick={this._spotifyLogin}
+          text="Log in with Spotify"
+        />
       </div>
     )
   }

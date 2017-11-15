@@ -21,6 +21,8 @@ export default () => {
     )
   )
 
+  // store.subscribe(() => console.log(store.getState()))
+
   if (module.hot) {
     module.hot.accept(() => {
       const nextRootReducer = require('./Reducers').default

@@ -1,6 +1,7 @@
 import { ResolvedActionFactory, RejectedActionFactory } from './utils'
 
 export const types = {
+  SPOTIFY_AUTH: 'SPOTIFY_AUTH',
   LOGOUT_INTENT: 'LOGOUT_INTENT',
   USER_CREATE_INTENT: 'USER_CREATE_INTENT',
   AUTHENTICATE_INTENT: 'AUTHENTICATE_INTENT',
@@ -9,6 +10,14 @@ export const types = {
 }
 
 export const actions = {
+  /**
+   * Generates a Spotify Authorization action
+   * @param {string} accessToken - Email to log into the application
+   */
+  spotifyAuthorization(token) {
+    return { type: types.SPOTIFY_AUTH, data: { token } }
+  },
+
   /**
    * Generates an Logout Action
    */

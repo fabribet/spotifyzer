@@ -7,7 +7,11 @@ export default (state = {}, action) => {
         ...state,
         ...action.payload
       }
-
+    case types.SPOTIFY_AUTH:
+      return {
+        ...state,
+        token: action.data.token
+      }
     case types.LOGOUT_INTENT:
       return {}
 

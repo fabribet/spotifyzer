@@ -10,8 +10,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Login from './Components/Login'
 import Home from './Components/Home'
+import Spotifyzer from './Components/Spotifyzer'
 import Header from './Components/Header'
-import Register from './Components/Register'
 import Notifications from './Components/Notifications'
 import { PrivateRoute, OnlyPublicRoute } from './Components/Routing'
 
@@ -24,12 +24,12 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <div>
         <Notifications />
-        <Header />
         <Router>
           <div>
             <PrivateRoute path="/" component={Home} />
             <OnlyPublicRoute path="/login" component={Login} />
-            <OnlyPublicRoute path="/register" component={Register} />
+            <PrivateRoute path="/spotifyzer" component={Spotifyzer} />
+            <PrivateRoute path="/home" component={Home} />
           </div>
         </Router>
       </div>
