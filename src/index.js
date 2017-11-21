@@ -9,7 +9,7 @@ import { ThemeProvider } from 'react-css-themr'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Login from './Components/Login'
-import Spotifyzer from './Components/Spotifyzer'
+import Home from './Components/Home'
 import Notifications from './Components/Notifications'
 import { PrivateRoute, OnlyPublicRoute } from './Components/Routing'
 
@@ -24,7 +24,7 @@ ReactDOM.render(
         <Notifications />
         <Router>
           <div>
-            <PrivateRoute path="/" component={Spotifyzer} />
+            <PrivateRoute path="/" component={Home} />
             <OnlyPublicRoute path="/login" component={Login} />
           </div>
         </Router>

@@ -1,0 +1,94 @@
+@import '../../CommonStyles/commonStyles.scss';
+
+.formContainer {
+  padding: 10px;
+  background-color: $black;
+}
+
+.inputsContainer {
+  @media(min-width: 720px) {
+    overflow: hidden;
+  }
+  margin-bottom: 15px;
+}
+
+.avatarContainer {
+  float:left;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: $gray;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: text-top;
+
+  @media(min-width: 720px) {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.email, .comment {
+  color: $shamrockGreen;
+  border: 1px solid $gray;
+  background-color: $black90;
+}
+
+.email::placeholder,
+.comment::placeholder {
+  color: $shamrockGreen;
+}
+
+.email {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  height: 20px;
+  border-radius: 500px;
+  display: inline-block;
+  min-width: 80%;
+  @media(min-width: 720px) {
+    width: 100%;
+  }
+}
+
+.comment {
+  border-radius: 4px;
+  resize: none;
+  display: block;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.inputError {
+  border: 1px solid $darkRed;
+  margin-bottom: 1px;
+}
+
+.errorLegend {
+  color: $darkRed;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.inputErrorLegend {
+  text-align: right;
+}
+
+.email.errorLegend,
+.comment.errorLegend {
+  margin-bottom: 1px;
+}
+
+
+
+.email:focus, .comment:focus {
+  outline: 0;
+}
+
+.buttonContainer {
+  margin-top: 15px 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+}

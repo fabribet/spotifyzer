@@ -1,0 +1,61 @@
+@import '../../CommonStyles/commonStyles.scss';
+
+.container {
+  padding: 10px 0;
+}
+
+.header {
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.commentsLegend {
+  float: left;
+  font-size: 13px;
+  color: $lightGray;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-top: 3px
+}
+
+.commentAction {
+  font-size: 13px;
+  padding-right: 10px;
+  text-align: right;
+  color: $shamrockGreen;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.actionLegend{
+  visibility: hidden;
+  @media(min-width: 720px) {
+    visibility: visible;
+  }
+}
+
+.actionContainer {
+  margin-left: 5px;
+  background-color: $black;
+  border-radius: 50%;
+  border: 0;
+  width:21px;
+  height:21px;
+  vertical-align: middle;
+  color: $shamrockGreen;
+  padding: 1px;
+  i {
+    font-size: 19px;
+  }
+}
+
+.actionContainer:focus {
+  outline: 0;
+}
+
+.noComments {
+  font-size: 13px;
+  color: $lightGray;
+}

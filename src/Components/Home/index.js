@@ -1,9 +1,18 @@
-import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { actions as userActions } from '../../Actions/User'
+import { connect } from 'react-redux'
 import Home from './Home'
 
-const mapStateToProps = state => ({
-  token: state.token
+const mapDispatchToProps = dispatch => ({
+  onSpotifyAuthorization(token) {
+    dispatch(userActions.spotifyAuthorization(token))
+  }
 })
 
-export default withRouter(connect(mapStateToProps)(Home))
+const mapStateToProps = state => {
+  return {
+    token: state.User.token
+  }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))

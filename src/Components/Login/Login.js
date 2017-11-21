@@ -16,10 +16,13 @@ export default class Login extends React.Component {
     super()
   }
 
-  _spotifyLogin() {
+  /**
+   * Redirects to the spotify implicit grant api based con the configured parameters.
+   */
+  spotifyLogin() {
     const client_id = 'client_id=704bab56aa8a456fbae1949d5107d08c'
     const response_type = 'response_type=token'
-    const redirect_uri = 'redirect_uri=http://localhost:8080/ '
+    const redirect_uri = 'redirect_uri=http://localhost:3000/'
     const location =
       'https://accounts.spotify.com/authorize?' +
       client_id +
@@ -34,7 +37,8 @@ export default class Login extends React.Component {
     return (
       <div className={style.buttonContainer}>
         <SpotifyButton
-          onClick={this._spotifyLogin}
+          onClick={this.spotifyLogin}
+          buttonStyle="green"
           text="Log in with Spotify"
         />
       </div>

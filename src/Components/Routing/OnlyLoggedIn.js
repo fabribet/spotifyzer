@@ -18,7 +18,7 @@ const onlyLoggedIn = ({
         render={props => (
           <Redirect
             to={{
-              pathname: '/spotifyzer',
+              pathname: '/home',
               state: { from: props.location }
             }}
           />

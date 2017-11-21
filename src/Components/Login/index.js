@@ -6,9 +6,6 @@ import { withRouter } from 'react-router-dom'
 const mapDispatchToProps = dispatch => ({
   onLogin({ email, password }) {
     dispatch(actions.Authenticate(email, password))
-  },
-  spotifyLogin() {
-    // something
   }
 })
 

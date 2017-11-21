@@ -5,7 +5,6 @@ import { METHODS, HeaderFactory } from './utils'
  * @param {string} query - The search query
  */
 export const GetAlbums = (query, token) => {
-  console.log('searching: ' + query + ' \n with token: ' + token)
   return fetch(`${process.env.API_URL}/search` + query, {
     method: METHODS.GET,
     headers: HeaderFactory(token)

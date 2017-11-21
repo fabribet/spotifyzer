@@ -22,4 +22,10 @@ app.use('/docs', express.static('doc'))
 app.use('/comments', comment)
 app.use('/search', search)
 app.use('/album', album)
+
+// 404 will fallback to the login page
+app.use(function(req, res) {
+  return res.redirect('/')
+})
+
 app.listen(process.env.APP_PORT || 3000, () => {})

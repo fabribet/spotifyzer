@@ -12,6 +12,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = (state, ownProps) => {
+  // Get the token from the query string.
   const requestHash = ownProps.location.hash
   const spotifyResponse = queryString.parse(requestHash)
   let token
